@@ -16,7 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			url : "http://localhost:8080/restful/userinfo/1/lucy",
 			success : function(res) {
 				var data = JSON.stringify(res);
-				alert(data);
+				$("#res").html(data);
 			},
 			error : function(res) {
 				alert(res.statusText);
@@ -25,9 +25,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	})
 </script>
 </head>
-
 <body>
-	index page.<br/>
+	<div id="res"></div>
 </body>
 
 </html>
